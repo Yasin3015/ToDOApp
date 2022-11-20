@@ -156,9 +156,10 @@ function addNewList(inputValue) {
                 alert("this list is added before you can't add it again")
             }else{
                 create(innerParagraphText);
+                document.getElementById("allTaskes").innerText = Number(document.getElementById("allTaskes").innerText) + 1;
             }
         }
-        document.getElementById("allTaskes").innerText = Number(document.getElementById("allTaskes").innerText) + 1;
+       
     }
     document.getElementById("textInput").value = "";
 }
