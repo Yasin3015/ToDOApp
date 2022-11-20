@@ -142,6 +142,7 @@ function addNewList(inputValue) {
         var innerParagraphText = inputValue;
         if(notes.length === 0){
             create(innerParagraphText);
+            document.getElementById("allTaskes").innerText = Number(document.getElementById("allTaskes").innerText) + 1;
         }else{
             for(let i =0 ; i< notes.length ; i++){
                 let currentTitle = notes[i].title;
