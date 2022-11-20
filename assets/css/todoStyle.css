@@ -1,0 +1,297 @@
+body {
+    background-color: #020631;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    overflow-x: hidden !important;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    /* overflow-x: hidden !important; */
+}
+.container {
+    margin-top: 10vh;
+    height: fit-content !important;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.header {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.header .background {
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    background-image: linear-gradient(#3305ec, #580dd7, #770BE2);
+    position: absolute;
+    margin: auto;
+    z-index: 0;
+    transform: rotate(-25deg);
+    transform-origin: bottom;
+}
+
+.header .icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: white !important;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 50px;
+    color: #020631;
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    transform: rotate(-15deg);
+    transform-origin: bottom;
+}
+
+.content .header p {
+    position: absolute;
+    top: 60px;
+    font-size: 20px;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center !important;
+}
+.addList{
+    max-width: 80%;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 7px;
+}
+.addList input{
+    width: 60%;
+    background-color: white;
+    outline: none;
+    height: 100%;
+    border: none;
+    padding: 15px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.addList button{
+    background-color: white;
+    font-size: 30px;
+    width: 20%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #3305ec;
+    text-align: right;
+}
+.addList button:hover{
+    cursor: pointer;
+}
+.container .listes{
+    margin-top: 50px !important;
+    width: 100%;
+    padding-bottom: 40px;
+}
+.container .list {
+    margin-top: 15px !important;
+    max-width: 80%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 6px 4px 5px rgb(17, 31, 110);
+    box-sizing: border-box;
+    margin: auto;
+    transition: all .5s;
+}
+@media (max-width: 540px) {
+    .container .list{
+        width: 100% !important;
+        font-size: 13px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .container .content .addList{
+        width: 100% !important;
+    }
+}
+
+.container .list .text {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container .list .text i {
+    margin-right: 10px;
+    color: white;
+    border: 1px solid black;
+} 
+.active{
+    background-color: #3305ec !important;
+    transform: rotateX(360deg) !important;
+    transition: all .5s !important;
+    color: white;
+}
+.active p{
+    text-decoration: line-through;
+}
+.list .fa-check{
+    display: none;
+    
+}
+.active .fa-check{
+    display: inline-block !important;
+    border: 1px solid white !important;
+}
+.active .fa-square{
+    display: none !important;
+}
+
+
+#list-cont h1{
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+
+/* =========================== start model ====================================== */
+
+.model{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px !important;
+    left: 0;
+    padding: 0px !important;
+    background-color: rgba(0, 0, 0, 0.405);
+    z-index: 99999999999999999999999999999999999;
+    display: none;
+}
+.model .container{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    position: relative;
+    height: 100vh !important;
+}
+.model .container .model__message{
+    width: 540px;
+    margin: auto;
+    margin: auto;
+    background-color: #02184b;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#delete{
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    background-color: inherit;
+    text-transform: capitalize;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#delete:hover{
+    background-color: #3305ec;
+}
+.model .container .model__message .model__message__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px rgb(187, 187, 187) solid;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 100 !important;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgb(77, 77, 77);
+}
+#cancelModel:hover{
+    color: black;
+    cursor: pointer;
+}
+.model .container .model__message .model__message__text{
+    border-bottom: 1px rgb(187, 187, 187) solid;
+    font-size: 16px;
+    text-align: left;
+    color: gray;
+    padding: 20px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.model .container .model__message .model__message__buttons{
+    padding: 20px;
+    text-align: right;
+}
+.model .container .model__message .model__message__buttons button{
+    padding: 10px ;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.primary{
+    background-color: #0b5ed7;
+}
+.primary:hover{
+    background-color: rgb(1, 1, 175);
+}
+.secondary{
+    background-color: rgb(87, 87, 87);
+}
+.secondary:hover{
+    background-color: rgb(62, 62, 62);
+}
+@media (max-width:650px) {
+    .model .container .model__message{
+        width: 100% !important;
+    }
+}
+/* =========================== end model ====================================== */

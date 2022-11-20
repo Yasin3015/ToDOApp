@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your To Do List</title>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/todoStyle.css">
+    <link rel="icon" href="list.png" />
+    <style>
+        /*///////////////// start content div///////////////// */
+        .listinfo{
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================== model creation ============== -->
+
+    <div class="model" id="theModel">
+        <div class="container">
+            <div class="model__message">
+                <h2 class="model__message__header">delete all <span id="cancelModel">&#128473;</span></h2>
+                <p class="model__message__text">Are you sure &#x3F;  you will delete all items you add </p>
+                <div class="model__message__buttons">
+                    <button type="button" class="secondary" id="close">cancel</button>
+                    <button type="button" class="primary" id="deleteAll">yes,delete all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== end model creation ============== -->
+
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="background"></div>
+                <div class="icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <p>happy <span id="day"></span> &#9203; &#128156;</p>
+               
+            </div>
+            <div class="addList">
+                <input type="text" id="textInput" placeholder="add new list..." value="">
+                <button id="addList">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="listinfo">
+                <h3> completed : <span id="complete">0</span> from <span id="allTaskes">0</span> </h3>
+                <button type="button" id="delete">deleteAll</button>
+            </div>
+        </div>
+        <div class="listes" id="list-cont">
+            
+        </div>
+    </div>
+    <script src="assets/js/todo.js"></script>
+</body>
+
+</html>
